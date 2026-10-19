@@ -59,7 +59,7 @@ class MagiaArch:
     L2_SIZE                 = 0x0CFF_0000 # here in RTL we have 0x4000_0000 but the end address (TEST_END_ADDR_START) then will fall in L2... no sense to me
     L2_ADDR_END             = L2_ADDR_START + L2_SIZE - 1
     TEST_END_ADDR_START     = L2_ADDR_END + 1
-    TEST_END_SIZE           = 0x400
+    TEST_END_SIZE           = 0x800 # crt0 exit writes a halfword at +2*hartid: 1024 tiles for 32x32
     STDOUT_ADDR_START       = 0xFFFF_0004
     STDOUT_SIZE             = 0x100
 
